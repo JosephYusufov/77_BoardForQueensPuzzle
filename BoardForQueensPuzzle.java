@@ -6,7 +6,6 @@
 public class BoardForQueensPuzzle {
     private int lastRankFilled;  /* the highest-numbered rank
       that holds a queen. */
-    private int ranks; // the size of this problem
     private int[] filesWithQueens;  /* indexed by rank, giving
       the file number that a queen occupies in that rank.
       Interacts with lastRankFilled: entries in filesWithQueens
@@ -21,7 +20,6 @@ public class BoardForQueensPuzzle {
       Construct an empty instance of the specified size
      */
     public BoardForQueensPuzzle( int ranks) {
-        this.ranks = ranks;
         lastRankFilled = 0;
         filesWithQueens = new int[ranks];
     }
@@ -30,7 +28,7 @@ public class BoardForQueensPuzzle {
       @return the size of the board
      */
     public int ranks() {
-        return ranks;
+        return filesWithQueens.length;
     }
 
 
@@ -42,7 +40,13 @@ public class BoardForQueensPuzzle {
                      no queen attacked another.
      */
     public boolean lastIsNg() {
-        return true;
+        boolean status = false;
+        for (int i = lastRankFilled; i >= 0; i--){
+            if (filesWithQueens[lastRankFilled].compareTo(filesWithQueens[i])
+                == 0){
+                    status = true;
+                } else if () //how do i implement diagonal rejection?
+        }
     }
 
 

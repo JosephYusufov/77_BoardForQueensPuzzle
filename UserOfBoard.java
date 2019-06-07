@@ -17,15 +17,15 @@ public class UserOfBoard {
 
         System.out.println( "toString for an empty board:");
         System.out.println( b + System.lineSeparator());
-        // // ----- next incremental step ends here -----
+        // ----- next incremental step ends here -----
 
 
-        // System.out.println( "no solution could start with "
-                          // + "an empty board: "
-                          // + b.lastIsNg()
-                          // + " ...expecting false"
-                          // + System.lineSeparator());
-        // // ----- next incremental step ends here -----
+        System.out.println( "no solution could start with "
+                          + "an empty board: "
+                          + b.lastIsNg()
+                          + " ...expecting false"
+                          + System.lineSeparator());
+        // ----- next incremental step ends here -----
 
 
         // System.out.println( "an empty size " + b.ranks()
